@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🔥 Viral Videos 🔥</title>
+
+<style>
+body {
+    margin:0;
+    font-family: Arial;
+    background:#f2f2f2;
+}
+
+.container{
+    max-width:500px;
+    margin:auto;
+    padding:10px;
+}
+
+.card{
+    background:#fff;
+    border-radius:10px;
+    padding:10px;
+    margin-bottom:15px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.video{
+    position:relative;
+}
+.video img{
+    width:100%;
+    border-radius:10px;
+}
+.play{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:40px;
+    color:#fff;
+    background:rgba(0,0,0,0.5);
+    padding:10px 15px;
+    border-radius:50%;
+}
+
+.title{
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.buttons{
+    display:flex;
+    gap:10px;
+}
+.buttons a{
+    flex:1;
+    text-align:center;
+    padding:10px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    color:#fff;
+}
+.btn1{ background:#007bff; }
+.btn2{ background:#28a745; }
+.btn3{ background:#ff9800; }
+
+.desc{
+    font-size:13px;
+    color:#555;
+    margin-top:10px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container" id="app"></div>
+
+<script>
+
+// 🔥 সব image list
+const images = [
+"https://i.imghippo.com/files/YEjN6327Dw.jpg",
+"https://i.imghippo.com/files/oSE1993XnQ.png",
+"https://i.postimg.cc/RFy9gFkY/Whats-App-Image-2025-12-09-at-15-21-39-ce14da15.jpg",
+"https://i.postimg.cc/28spYsk2/photo-2025-12-18-18-20-55.jpg",
+"https://i.postimg.cc/xjKSrfQ4/Screenshot-2026-02-06-204117.png",
+"https://i.postimg.cc/LXccdLM8/photo-2026-01-14-11-46-50.jpg",
+"https://i.postimg.cc/MTF7gRcQ/photo-2026-03-21-14-58-01.jpg",
+"https://i.postimg.cc/Zn55rcpB/photo-2026-03-23-16-57-47.jpg",
+"https://i.postimg.cc/zGm4PS7r/IMG-20250902-132719-942.jpg",
+"https://i.postimg.cc/X7d49Z21/image-search-1756758141344.png",
+"https://i.postimg.cc/kgwS19PP/IMG-20250902-150722.jpg",
+"https://i.postimg.cc/C5bxnCss/FB-IMG-1756800753955.jpg",
+"https://i.postimg.cc/56sZNMfT/sample3.jpg",
+"https://i.postimg.cc/mkJ36kNX/image-search-1756797304811.jpg",
+"https://i.postimg.cc/JsmWtQXH/sample2.jpg",
+"https://i.postimg.cc/rdZ6nXP5/sample1.jpg",
+"https://i.postimg.cc/x8VKBqWC/IMG-20250902-183606-674.jpg",
+"https://i.postimg.cc/m2RYwzYp/IMG-20250902-183339-926.jpg",
+"https://i.postimg.cc/j5Q53QB3/image-search-1756802042026.jpg",
+"https://i.postimg.cc/htrMb93M/IMG-20250902-132730-352.jpg",
+"https://i.postimg.cc/YqcPjPMc/image-search-1756758285854.jpg",
+"https://i.postimg.cc/qBCTdhdB/image-search-1756758210832.jpg"
+];
+
+// 🔥 container
+const app = document.getElementById("app");
+
+// 🔥 loop করে সব card বানাবে
+images.forEach((img, index) => {
+
+app.innerHTML += `
+<div class="card">
+
+<div class="video">
+<img src="${img}">
+<div class="play">▶</div>
+</div>
+
+<div class="title">
+🔥 ভাইরাল ভিডিও ${index+1} - 11 মিনিট 05 সেকেন্ড
+</div>
+
+<div class="buttons">
+<a href="#" class="btn1">▶ ভিডিও লিংক</a>
+<a href="#" class="btn2">⬇ Download</a>
+<a href="#" class="btn3">📝 Register</a>
+</div>
+
+<div class="desc">
+ভিডিও দেখার নিয়ম: ভিডিও ডাউনলোড এবং ভিডিও দেখতে প্রথমে App টি ডাউনলোড করুন। Register বাটনে ক্লিক করুন > Play With Share box এ ক্লিক করুন > Play store নিয়ে যাবে sharebox app টি দেখতে পাবেন install করুন। তারপর আবার Register বাটনে ক্লিক করুন > তাহলেই ১০০% ভিডিও দেখতে পারবেন।
+</div>
+
+</div>
+`;
+
+});
+
+</script>
+
+</body>
+</html>

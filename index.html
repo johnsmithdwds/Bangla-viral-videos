@@ -160,53 +160,69 @@ app.innerHTML += `
   </a>
 </div>
 
+</script>
+
+<!-- 🔥 SOCIAL BAR AD -->
+<div class="social-bar" id="adBar">
+  <div class="close-btn" onclick="document.getElementById('adBar').style.display='none'">✖</div>
+
+  <!-- Image with Link -->
+  <a href="https://www.profitablecpmratenetwork.com/mq2h6va2g?key=84fd8af9fbf4199827f781b89631e3d7">
+    <img src="https://i.imgur.com/QcDBxoT.png" alt="Ad" class="ad-img">
+  </a>
+
+  <div class="text">
+    👉 এখনই রেজিস্ট্রেশন করুন এবং পান ১০,০০০ টাকা বোনাস! সীমিত সময়ের অফার — মিস করবেন না।
+  </div>
+
+  <a href="https://www.profitablecpmratenetwork.com/mq2h6va2g?key=84fd8af9fbf4199827f781b89631e3d7" class="btn-ad">
+    👉 আমি এখনই রেজিস্টার করবো
+  </a>
+</div>
+
 <style>
-/* 🔥 POPUP STYLE */
-.popup {
+.social-bar {
   position: fixed;
-  top: 0;
-  left: 0;
+  bottom: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
-  display: none; /* শুরুতে hidden */
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
-}
-
-.popup-box {
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-  width: 90%;
-  max-width: 300px;
-  position: relative;
-}
-
-.popup-img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.popup-btn {
-  display: block;
-  margin-top: 10px;
+  background: #111;
   padding: 10px;
+  text-align: center;
+  z-index: 9999;
+  color: #fff;
+}
+
+/* ❌ Close Button */
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* ✅ Smaller Image */
+.ad-img {
+  width: 120px;   /* 👉 এখানে size control */
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Text */
+.text {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+/* ✅ Red Button */
+.btn-ad {
+  display: inline-block;
+  padding: 10px 20px;
   background: red;
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
-}
-
-.close-popup {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  cursor: pointer;
-  font-size: 18px;
 }
 </style>
 

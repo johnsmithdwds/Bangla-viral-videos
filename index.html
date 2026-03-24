@@ -161,56 +161,62 @@ app.innerHTML += `
 </div>
 
 <style>
-.social-bar {
+/* 🔥 POPUP STYLE */
+.popup {
   position: fixed;
-  bottom: 0;
+  top: 0;
+  left: 0;
   width: 100%;
-  background: #111;
-  padding: 10px;
-  text-align: center;
-  z-index: 9999;
-  color: #fff;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none; /* শুরুতে hidden */
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
 }
 
-/* ❌ Close Button */
-.close-btn {
-  position: absolute;
-  right: 10px;
-  top: 5px;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-/* ✅ Smaller Image */
-.ad-img {
-  width: 120px;   /* 👉 এখানে size control */
-  height: auto;
+.popup-box {
+  background: #fff;
+  padding: 15px;
   border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 300px;
+  position: relative;
 }
 
-/* Text */
-.text {
-  margin: 8px 0;
-  font-size: 14px;
+.popup-img {
+  width: 100%;
+  border-radius: 8px;
 }
 
-/* ✅ Red Button */
-.btn-ad {
-  display: inline-block;
-  padding: 10px 20px;
+.popup-btn {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
   background: red;
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
 }
+
+.close-popup {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
 </style>
 
-    <script>
-setTimeout(function(){
-  document.getElementById("popupAd").style.display = "flex";
-}, 5000); // 5 seconds delay
-    </script>
+<script>
+window.onload = function() {
+  setTimeout(function(){
+    document.getElementById("popupAd").style.display = "flex";
+  }, 5000); // 5 seconds delay
+};
+</script>
     
 
 </body>

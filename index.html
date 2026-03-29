@@ -220,6 +220,9 @@ const titles = [
 function randomK(min, max) {
   return (Math.random() * (max - min) + min).toFixed(1) + "k";
 }
+    function randomDownload(min, max){
+  return Math.floor(Math.random()*(max-min)+min)+"+";
+    }
 
 const app = document.getElementById("app");
 
@@ -229,7 +232,7 @@ images.forEach((img, index) => {
 app.innerHTML += `
 <div class="card">
 
-<div class="video">
+<div class="video" onclick="playVideo()">
 <img src="${img}">
 <div class="play">▶</div>
 </div>

@@ -106,6 +106,19 @@ body {
 .stats{
   margin-top:8px;
   font-size:13px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.left-stats{
+  display:flex;
+  gap:10px;
+}
+
+.download{
+  color:#22c55e;
+  font-weight:bold;
 }
 
 /* Loader */
@@ -251,8 +264,13 @@ ${titles[index] || "🔥 ভাইরাল ভিডিও দেখুন"}
 </div>
 
 <div class="stats">
-👍 ${randomK(10,50)} &nbsp;&nbsp; 👁️ ${randomK(40,100)} <br>
-⬇️ ${randomDownload(5000, 50000)} Downloads
+  <div class="left-stats">
+    👍 ${randomK(10,50)}
+    👁️ ${randomK(40,100)}
+  </div>
+  <div class="download">
+    ⬇️ ${randomDownload(5000, 50000)}
+  </div>
 </div>
 
 </div>

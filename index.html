@@ -144,6 +144,24 @@ body {
 
 <div class="container" id="app"></div>
 
+    <div id="loader">
+  <div class="spinner"></div>
+  <p style="margin-top:10px;">ভিডিও লোড হচ্ছে...</p>
+    </div>
+
+    function playVideo(){
+  const loader = document.getElementById("loader");
+  loader.style.display = "flex";
+
+  // fake loading delay
+  setTimeout(function(){
+    loader.style.display = "none";
+
+    // চাইলে এখানে redirect দিবে
+    window.location.href = "https://www.profitablecpmratenetwork.com/wfgse0gu0?key=dfa595cebf5450be98481dd0467d958f";
+  }, 3000);
+}
+
 <script>
 
 // 🔥 image list
@@ -231,7 +249,8 @@ ${titles[index] || "🔥 ভাইরাল ভিডিও দেখুন"}
 </div>
 
 <div class="stats">
-👍 ${randomK(10,50)} &nbsp;&nbsp; 👁️ ${randomK(40,100)}
+👍 ${randomK(10,50)} &nbsp;&nbsp; 👁️ ${randomK(40,100)} <br>
+⬇️ ${randomDownload(5000, 50000)} Downloads
 </div>
 
 </div>

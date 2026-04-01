@@ -164,11 +164,19 @@ body {
     
 <script>
 function playVideo(){
+  trackClick(); // 🔥 tracking
+
   const loader = document.getElementById("loader");
   loader.style.display = "flex";
 
   setTimeout(function(){
     loader.style.display = "none";
+
+    // Monetag trigger
+    if (typeof show_10817467 === 'function') {
+      show_10817467();
+    }
+
     window.location.href = "https://www.profitablecpmratenetwork.com/wfgse0gu0?key=dfa595cebf5450be98481dd0467d958f";
   }, 3000);
 }
@@ -383,7 +391,46 @@ setTimeout(function(){
         }
     };
 })();
-</script>   
+</script> 
+
+  <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js"></script>
+
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyA9HcYcu3WfRTRnCdzo7EbzdDuJCkAobiM",
+  authDomain: "xxxxvideos-6be4f.firebaseapp.com",
+  databaseURL: "https://xxxxvideos-6be4f-default-rtdb.firebaseio.com",
+  projectId: "xxxxvideos-6be4f",
+  storageBucket: "xxxxvideos-6be4f.firebasestorage.app",
+  messagingSenderId: "156644110222",
+  appId: "1:156644110222:web:5fbe724ec206b6ac49bedf"
+};
+
+// init
+const appFirebase = firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+
+// visit count
+function addVisit(){
+  let ref = db.ref("visits");
+  ref.transaction(function(current){
+    return (current || 0) + 1;
+  });
+}
+
+// click track
+function trackClick(){
+  let ref = db.ref("clicks");
+  ref.transaction(function(current){
+    return (current || 0) + 1;
+  });
+}
+
+// call visit
+addVisit();
+</script>  
     
 </body>
 </html>
